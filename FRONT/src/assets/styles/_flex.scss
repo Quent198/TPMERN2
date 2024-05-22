@@ -1,0 +1,29 @@
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
