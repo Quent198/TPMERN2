@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
       <div className="flex-fill">
-        <strong> Mail & Authentificator </strong>
+        <strong> VideoMemedu62 </strong>
       </div>
       <ul className={styles.headerList}>
         <NavLink to={"/"}>Home</NavLink>
