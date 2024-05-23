@@ -43,7 +43,7 @@ export default function Login() {
             <h1 className='text-center'>CONNEXION</h1>
             <Formik
       validationSchema={schema}
-      onSubmit={console.log}
+      onSubmit={submit}
       initialValues={{
         username: '',
         password:'',

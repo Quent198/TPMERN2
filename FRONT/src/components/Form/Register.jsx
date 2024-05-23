@@ -44,7 +44,7 @@ export default function Register() {
         <h1 className='text-center'>INSCRIPTION</h1>
         <Formik
   validationSchema={schema}
-  onSubmit={console.log}
+  onSubmit={submit}
   initialValues={{
     username: '',
     password:'',
@@ -85,7 +85,7 @@ export default function Register() {
         >
           <Form.Label>Mot de Passe</Form.Label>
           <Form.Control
-            type="text"
+            type="password"
             placeholder="Mot de Passe"
             name="password"
             value={values.password}
@@ -106,7 +106,7 @@ export default function Register() {
         >
           <Form.Label>Confirmer le mot de passe</Form.Label>
           <Form.Control
-            type="text"
+            type="password"
             placeholder="Confirmer le mot de passe"
             name="confirmpassword"
             value={values.confirmpassword}
