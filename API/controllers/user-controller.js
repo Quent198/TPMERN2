@@ -28,4 +28,28 @@ const signupUser = async (req, res) => {
     }
 };
 
-module.exports = { signupUser };
+const loginUser = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+      const user = await User.findOne({ email });
+      if (user) {
+        if (!user.token) {
+          const match = await bcrypt.compare(password, user.password);
+          if (match) {
+            
+            res.status(200).json({ user });
+          } else {
+            res.status(400).json({ message: "Mauvais Email et/ou Password" });
+          }
+        } else {
+          res.status(400).json({ message: "Email non validé" });
+        }
+      } else {
+        res.status(400).json({ message: "Mauvais Email et/ou Password" });
+      }
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  };
+
+module.exports = { signupUser, loginUser };
